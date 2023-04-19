@@ -1,0 +1,367 @@
+body{
+    background-image: url("images/background5.jpg");
+    background-position: right;
+    background-size: 120%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+
+#topNav {
+    font-family: 'Questrial', sans-serif;
+    position: relative;
+    left: 3%;
+    padding-top: 1em;
+    width: 90%;
+    
+}
+
+#topNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+  
+#topNav ul li {
+    float: left;
+}
+  
+#topNav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+#topNav ul li a:hover {
+    background-color: #111;
+    border-radius: 5%;
+}
+
+footer {
+	width: 50%;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+footer ul{
+	display: flex;
+}
+
+footer ul li{
+	flex: auto;
+    list-style-type: none;
+}
+
+footer ul li a{
+    font-family: 'Questrial', sans-serif;
+	color: #dddddd;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+footer ul li a:hover{
+	color: #9e9e9e;
+}
+
+footer nav ul li img{
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width:768px){
+	footer ul {
+		display: inline-block;
+        position: fixed;
+        width: 20%;
+        top:0;
+        bottom: 0;
+        left:0;
+        right:20%;
+        font-size: 12px;
+	}
+
+    #topNav{
+        display: none;
+    }
+
+    header{
+        width:80%;
+    }
+}
+
+
+/* 
+* for the home page
+ */
+#introduce{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+#introduce h1, #introduce h2{
+    color: #ffffff;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Questrial', sans-serif;
+    position: relative;
+    top:10%;
+    margin:auto;
+    width: 70%;
+}
+#introduce img{
+    width: 30%;
+    position: relative;
+    
+    left: 35%;
+    z-index: -1;
+}
+
+/*
+* for the about page
+ */
+#maincontent{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#profile {
+    position: relative;
+    width: 30%;
+    left: 45%;
+}
+
+#profile img{
+    width: 30%;
+    border-radius: 100%;
+    
+}
+
+
+#content{
+    margin-bottom: 1.5%;
+}
+
+#aboutme {
+    position: relative;
+    left: 27%;
+    width: 45%;
+
+}
+
+#aboutme h2{
+    font-family: 'Questrial', sans-serif;
+    color: #ffffff;
+    text-align: left;
+}
+
+#aboutme h2::after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    position: relative;
+    top: 10px;
+  }
+
+#aboutme p{
+    font-family: 'Questrial', sans-serif;
+    color: #ffffff;
+    text-align: left;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
+#education {
+    position: relative;
+
+    left: 27%;
+    width: 45%;
+}
+
+#education h2{
+    font-family: 'Questrial', sans-serif;
+    color: #ffffff;
+    text-align: left;
+}
+
+#education h2::after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    position: relative;
+    top: 10px;
+  }
+
+#education1 li:not(:first-child):not(:nth-last-child(2)){
+    font-family: 'Questrial', sans-serif;
+    color: #ffffff;
+    padding-left: 5%;
+    list-style: none;
+    text-align: left;
+    line-height: 150%;
+    
+}
+
+#education1 li:not(:first-child):not(:nth-last-child(2)):before{
+    content: "\2022";
+    color: #ffffff;
+    display: inline-block;
+    width: 1em;
+    text-align: left;
+}
+
+#education1 li:first-child, #education1 li:nth-last-child(2){
+    font-family: 'Questrial', sans-serif;
+    color: #ffffff;
+    list-style: none;
+    line-height: 150%;
+    position: relative;
+    left: -6%;
+}
+
+
+
+
+#skills {
+    position: relative;
+
+    left: 27%;
+    width: 45%;
+    line-height: 20px;
+}
+
+#skills h2{
+    font-family: 'Questrial', sans-serif;
+    color: #ffffff;
+    text-align: left;
+}
+
+#skills h2::after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    position: relative;
+    top: 10px;
+  }
+
+#skills1 li{
+    font-family: 'Questrial', sans-serif;
+    color: #ffffff;
+    text-align: justify;
+    position: relative;
+    left: -3%;
+}
+
+/*
+* for the exp page
+ */
+#main {
+    position: relative;
+    left:60px;
+    width: 80%;
+    z-index: 1;
+    display: inline-block;
+}
+
+
+
+#work {
+    position: relative;
+    top: 5%;
+    left:16px;
+    width: 70%;
+    margin-bottom: 4%;
+    
+}
+
+#work h3{
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    width: 100%;
+    margin: 0px 0px 10px 30px;
+    padding: 0px 0px 0px 8px;
+    line-height: 30px;
+    
+}   
+
+#work ul li {
+    line-height: 26px;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    width: 90%;
+    position: relative;
+    bottom: 10px;
+    left:10px
+}
+
+
+/*
+* for the form page
+*/
+#container{
+    position: relative;
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-right: auto;
+    margin-bottom: auto;
+    width: 70%;
+    
+}
+
+input[type=text],textarea {
+    font-family: 'Questrial', sans-serif;
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+
+
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-family: 'Questrial', sans-serif;
+    color: white;
+  }
+
+  input[type=submit],input[type=reset] {
+    font-family: 'Questrial', sans-serif;
+    background-color: #128fc9;
+    border: none;
+    color: white;
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 1px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover,input[type=reset]:hover{
+    background-color: #054229;
+    
+  }
+
+  .error{
+    color: red;
+    font-family: 'Questrial', sans-serif;
+    font-size: 14px;
+    padding-top: 10px;
+  }
+ 
