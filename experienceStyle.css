@@ -1,0 +1,147 @@
+
+
+body{
+    background-image: url("images/background5.jpg");
+    background-position: right;
+    background-size: 120%;
+    background-attachment: fixed;
+
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#logo img{
+    width: 3%;
+    position: absolute;
+    top: 1.5em;
+    left: 2%;
+    
+}
+
+#topNav {
+    font-family: 'Questrial', sans-serif;
+    position: relative;
+    left: 6.5%;
+    padding-top: 1.5em;
+}
+
+#topNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto; 
+}
+  
+#topNav ul li {
+    float: left;
+}
+  
+#topNav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+#topNav ul li a:hover {
+    background-color: #111;
+    border-radius: 5%;
+}
+
+
+
+
+#main {
+    position: relative;
+    margin-top: 2em;
+    left:60px;
+    width: 80%;
+    height: 50%;
+    z-index: 1;
+    display: inline-block;
+}
+
+
+
+#work {
+    position: relative;
+    top: 5%;
+    left:16px;
+    width: 70%;
+    
+}
+
+#work h3{
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    width: 100%;
+    margin: 0px 0px 10px 30px;
+    padding: 0px 0px 0px 8px;
+    line-height: 30px;
+    
+}   
+
+
+
+#work ul li {
+    line-height: 26px;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+    width: 90%;
+    position: relative;
+    bottom: 10px;
+    left:10px
+}
+
+   
+
+
+
+
+
+
+footer {
+	width: 50%;
+    position: relative;
+    bottom: 0;
+    left: 26%;
+}
+
+footer ul{
+	display: flex;
+}
+
+footer ul li{
+	flex: auto;
+    list-style-type: none;
+}
+
+footer ul li a{
+    font-family: 'Questrial', sans-serif;
+	color: #dddddd;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+footer ul li a:hover{
+	color: #9e9e9e;
+}
+
+footer nav ul li img{
+    width: 20px;
+    height: 20px;
+    
+}
+
+@media (max-width:768px){
+	footer ul {
+		display: inline-block;
+        position: fixed;
+        width: 20%;
+        bottom: 0;
+        right:18em
+
+	}
+}
