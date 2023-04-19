@@ -23,13 +23,15 @@ body{
     position: relative;
     left: 6%;
     padding-top: 1em;
+    width: 90%;
+    
 }
 
 #topNav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: auto; 
+    
 }
   
 #topNav ul li {
@@ -189,10 +191,9 @@ container{
 
 
 
-
 footer {
 	width: 50%;
-    position: relative;
+    position: absolute;
     bottom: 0;
     left: 26%;
 }
@@ -228,7 +229,18 @@ footer nav ul li img{
 		display: inline-block;
         position: fixed;
         width: 20%;
+        top:0;
         bottom: 0;
-        right:18em;
+        left:0;
+        right:20%;
+        font-size: 12px;
 	}
+
+    #topNav{
+        display: none;
+    }
+
+    header{
+        width:80%;
+    }
 }
