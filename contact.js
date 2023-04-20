@@ -1,56 +1,35 @@
 
-function validate(e) {
-	//	Hides all error elements on the page
-	hideErrors();
-
-	//	Determine if the form has errors
+function validate(e) {	
+	hideErrors();	
 	if (formHasErrors()) {
-		// 	Prevents the form from submitting
 		e.preventDefault();
 		return false;
 	}
-
 	return true;
 }
 
-/*
- * Handles the reset event for the form.
- *
- * param e A reference to the reset event
- * return  True allows the reset to happen; False prevents
- *         the browser from resetting the form.
- */
 function resetForm(e) {
-	// Confirm that the user wants to reset the form.
 	if (confirm('Clear Form?')) {
-		// Ensure all error fields are hidden
 		hideErrors();
-
-		// Set focus to the first text field on the page
 		document.getElementById("fname").focus();
-
-		// When using onReset="resetForm()" in markup, returning true will allow
-		// the form to reset
 		return true;
 	}
-
-	// Prevents the form from resetting
 	e.preventDefault();
-
-	// When using onReset="resetForm()" in markup, returning false would prevent
-	// the form from resetting
 	return false;
 }
 
+function hideErrors() {
+	
+	let error = document.getElementsByClassName("error");
+	for (let i = 0; i < error.length; i++) {
+		
+		error[i].style.display = "none";
+	}
+}
 
-/*
- * Does all the error checking for the form.
- *
- * return   True if an error was found; False if no errors were found
- */
 function formHasErrors() 
 {
-	// When the required fields are empty, submission of form is halted 
+	// required fields are empty, no submission
 	let errorFlag = false;
 	let requiredFields = ["fname", "phone","email"];
 
@@ -66,7 +45,7 @@ function formHasErrors()
 		}
 	}
 
-    // When the Phone Number is not in the correct format, submission of form is halted
+    // Phone Number is not in the correct format, no submission
 		let regex1 = new RegExp(/^\d{10}$/);
 		let phoneValue = document.getElementById("phone").value;
 
@@ -81,7 +60,7 @@ function formHasErrors()
 		}	
 
 
-    // When the Email Address is not in the correct format, submission of form is halted
+    // email is not in the correct format, no submission
 	let regex2 = new RegExp(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/);
 	let emailAddress = document.getElementById("email").value;
 
@@ -98,6 +77,7 @@ function formHasErrors()
 	return errorFlag;
 }
 
+
 function formFieldHasInput(field) {
 	if (field.value == null || field.value == "") {
 		return false;
@@ -105,34 +85,7 @@ function formFieldHasInput(field) {
 	return true;
 }
 
-/*
- * Removes white space from a string value.
- *
- * return  A string with leading and trailing white-space removed.
- */
-function trim(str) 
-{
-	// Uses a regex to remove spaces from a string.
-	return str.replace(/^\s+|\s+$/g,"");
-}
 
-/*
- * Hides all of the error elements.
- */
-function hideErrors() {
-	// Get an array of error elements
-	let error = document.getElementsByClassName("error");
-	
-	// Loop through each element in the error array
-	for (let i = 0; i < error.length; i++) {
-		// Hide the error element by setting it's display style to "none"
-		error[i].style.display = "none";
-	}
-}
-
-/*
- * Handles the load event of the document.
- */
 function load() {
     // Add event listener for the form submit
     document.getElementById("submitForm").addEventListener("submit", validate);
@@ -142,6 +95,19 @@ function load() {
 
     // Hide all errors on the form at the beginning
     hideErrors();
+
+	// When users focus on the input, the textbox will be highlighted
+	let requiredFields = ["fname", "phone","email","subject"];
+	for (let i= 0; i< requiredFields.length; i++)
+	document.getElementById(requiredFields[i]).addEventListener("focus", function() {
+		document.getElementById(requiredFields[i]).style.backgroundColor = "antiquewhite";
+	});
+
+	// When users leave focus on the input, the textbox will be reset to white
+	for (let i= 0; i< requiredFields.length; i++)
+	document.getElementById(requiredFields[i]).addEventListener("blur", function() {
+		document.getElementById(requiredFields[i]).style.backgroundColor = "white";
+	});
 
 }
 
