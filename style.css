@@ -50,7 +50,7 @@ footer {
     position: relative;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 0;
+    margin-top: auto;
     margin-bottom: 0;
 }
 
@@ -110,6 +110,7 @@ footer nav ul li img{
     flex-direction: column;
     justify-content: center;
     margin-bottom: 5%;
+    
 }
 #introduce h1, #introduce h2{
     color: #ffffff;
